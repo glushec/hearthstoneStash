@@ -1,0 +1,36 @@
+ion-slide {
+  height: 100vh;
+  width: 100vh;
+}
+
+.slides-text {
+  font-family: BelweBold;
+  font-size: 3.5vh;
+  letter-spacing: 0.1em;
+  color: #424242;
+  width: 80%;
+  padding-top: 50%;
+  position: absolute;
+}
+
+.slides-image {
+  padding-bottom: 40vh;
+  width: 70%;
+}
+
+ion-button {
+  margin-top: 33vh;
+  position: absolute;
+  letter-spacing: 0.2em;
+}
+
+
+.first {
+  color: white;
+  padding-top: 0;
+  font-size: 7vh;
+  letter-spacing: 0;
+  text-shadow:  1.5px 1.5px 0 var(--ion-color-primary-dark), 1.5px -1.5px 0 var(--ion-color-primary-dark), -1.5px 1.5px 0 var(--ion-color-primary-dark),
+                -1.5px -1.5px 0 var(--ion-color-primary-dark), 1.5px 0px 0 var(--ion-color-primary-dark), 0px 1.5px 0 var(--ion-color-primary-dark),
+                -1.5px 0px 0 var(--ion-color-primary-dark), 0px -1.5px 0 var(--ion-color-primary-dark);
+}

@@ -1,0 +1,70 @@
+<ion-content padding>
+  <hr class="hr"><img src="/src/assets/image/banner.png"><hr class="hr"><hr class="hr">
+
+  <div class="main-div">
+
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1">LOGIN</label>
+
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2">REGISTER</label>
+
+
+    <section id="content1">
+      <form>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="mail"></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="Email" required name="email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="lock"></ion-icon>
+          </ion-label>
+          <ion-input type="password" placeholder="Password" required name="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <hr>
+
+        <ion-button expand="full" shape="round" (click)="login(user)">login</ion-button>
+
+      </form>
+    </section>
+
+    <section id="content2">
+      <form>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="create"></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name"></ion-input>
+          <a class="tooltips" text-right>
+            <span>Name is optional.</span>
+            <ion-icon name="help-circle"></ion-icon>
+          </a>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="mail"></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="Email" required name="email" [(ngModel)]="ruser.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="lock"></ion-icon>
+          </ion-label>
+          <ion-input type="password" placeholder="Password" required name="password" [(ngModel)]="ruser.password"></ion-input>
+        </ion-item>
+        <hr>
+        <ion-button expand="full" shape="round" (click)="registerAndName(ruser,name)">Register</ion-button>
+
+      </form>
+    </section>
+
+  </div>
+
+</ion-content>

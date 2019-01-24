@@ -1,0 +1,13 @@
+<ion-fab style="margin-bottom: 12vh;" vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="presentPopover()" >
+    <ion-icon name="person"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-tabs>
+  <ion-tab label="Cards" icon="albums" href="/tabs/(card:card)">
+    <ion-router-outlet name="card"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="Favorite" icon="star" href="/tabs/(favorite:favorite)">
+    <ion-router-outlet name="favorite"></ion-router-outlet>
+  </ion-tab>
+</ion-tabs>

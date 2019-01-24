@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favorite Cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card *ngIf="favoriteCardList.length == 0">
+  <ion-card-title>No cards yet.</ion-card-title>
+  <ion-card-content>
+      Add cards to your favorites list by clicking the flame icon.
+  </ion-card-content>
+  <ion-icon name="flame"></ion-icon>
+</ion-card>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let card of favoriteCardList">
+            <ion-item [href]="'/tabs/(card:card/' + card.cardId + ')'">
+                <ion-label>
+                    <h2>{{card.name}}
+                    <ion-icon style="color:#424242;padding-top:2px;float: right;" slot="icon-only" name="arrow-dropright"></ion-icon>
+                    </h2>
+                  </ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option (click)="deleteCard(card)" color="danger">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

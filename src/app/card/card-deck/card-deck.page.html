@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="header-text">Card Deckss</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-card-list *ngFor="let cardDeck of cardDecks"
+                 [items]="cardDeck.types"
+                 [listName]="cardDeck.name"
+                 [navigateTo]="generateUrl">
+  </app-card-list>
+</ion-content>
